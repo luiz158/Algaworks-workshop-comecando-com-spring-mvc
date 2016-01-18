@@ -25,7 +25,7 @@ public class Titulo {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long codido;
+	private Long codigo;
 	
 	@NotEmpty(message = "Descrição é obrigatória")
 	@Size(max = 60, message = "Adescrição não pode conter mais de 60 caracteres")
@@ -45,11 +45,11 @@ public class Titulo {
 	@Enumerated(EnumType.STRING)
 	private StatusTitulo status;
 	
-	public Long getCodido() {
-		return codido;
+	public Long getCodigo() {
+		return codigo;
 	}
-	public void setCodido(Long codido) {
-		this.codido = codido;
+	public void setCodigo(Long codigo) {
+		this.codigo = codigo;
 	}
 	public String getDescricao() {
 		return descricao;
@@ -84,7 +84,7 @@ public class Titulo {
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((codido == null) ? 0 : codido.hashCode());
+		result = prime * result + ((codigo == null) ? 0 : codigo.hashCode());
 		return result;
 	}
 	
@@ -97,10 +97,10 @@ public class Titulo {
 		if (getClass() != obj.getClass())
 			return false;
 		Titulo other = (Titulo) obj;
-		if (codido == null) {
-			if (other.codido != null)
+		if (codigo == null) {
+			if (other.codigo != null)
 				return false;
-		} else if (!codido.equals(other.codido))
+		} else if (!codigo.equals(other.codigo))
 			return false;
 		return true;
 	}
